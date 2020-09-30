@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="55dp"
+        android:ems="10"
+        android:hint="Numero 1"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:hint="Numero 2"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber1"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber1" />
+
+    <Button
+        android:id="@+id/buttonSumar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUMAR"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonRestar"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumber2" />
+
+    <Button
+        android:id="@+id/buttonRestar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:text="Restar"
+        app:layout_constraintEnd_toEndOf="@+id/editTextNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="2dp"
+        android:text="TextView"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/buttonRestar"
+        app:layout_constraintStart_toStartOf="@+id/buttonSumar"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSumar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
